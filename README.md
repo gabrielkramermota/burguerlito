@@ -58,6 +58,10 @@ export const WHATSAPP_NUMBER = '5514997366653'
 
 Categorias disponíveis: `burgers`, `combos`, `drinks`.
 
+**Horários** — `src/utils/business.js` e `src/components/BusinessStatus.jsx`:
+- Quinta, sábado e domingo: 18h30 às 23h
+- Sexta: 12h às 17h e 18h30 às 23h
+
 **Imagens** — coloque os arquivos na pasta `images/` na raiz. Elas são servidas como `/nome-do-arquivo.png`.
 
 ## Fluxo do pedido

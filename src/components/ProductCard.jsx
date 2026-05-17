@@ -10,7 +10,7 @@ function formatPrice(price) {
   return `R$ ${price.toFixed(2).replace('.', ',')}`
 }
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, isOpen }) {
   const { addToCart } = useCart()
   const [imgSrc, setImgSrc] = useState(product.image)
 
@@ -44,8 +44,12 @@ export default function ProductCard({ product }) {
       <h3 className="subtitle text-lg mb-2 text-white font-bold">{product.name}</h3>
       <p className="text-gray-300 text-sm mb-4 leading-relaxed">{product.description}</p>
 
-      <button onClick={handleAdd} className="btn-primary w-full py-2.5 rounded-lg text-white text-sm">
-        Adicionar
+      <button
+        onClick={handleAdd}
+        disabled={!isOpen}
+        className={`btn-primary w-full py-2.5 rounded-lg text-white text-sm ${!isOpen ? 'opacity-40 cursor-not-allowed' : ''}`}
+      >
+        {isOpen ? 'Adicionar' : 'Fechado'}
       </button>
     </div>
   )

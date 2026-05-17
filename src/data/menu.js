@@ -15,7 +15,7 @@ export const menuData = [
   { id: 10, name: 'Combo Trio', price: 59.90, oldPrice: 72.90, category: 'combos', image: '/combo-trio-7.png', description: '3x Smash Simples + 3x Refrigerante 350ml' },
 
   // ===== BEBIDAS =====
-  { id: 11, name: 'Água 500ml', price: 8.00, category: 'drinks', image: '/agua-500ml.png', description: 'Água mineral gelada' },
+  { id: 11, name: 'H2O 500ml', price: 8.00, category: 'drinks', image: '/agua-500ml.png', description: 'Água mineral gelada' },
   { id: 12, name: 'Sprite 350ml', price: 8.00, category: 'drinks', image: '/refrigerante-sprite.png', description: 'Refrigerante de limão' },
   { id: 13, name: 'Fanta Laranja 350ml', price: 8.00, category: 'drinks', image: '/refrigerante-fanta-laranja.png', description: 'Refrigerante de laranja' },
   { id: 14, name: 'Pepsi 350ml', price: 8.00, oldPrice: 8.99, category: 'drinks', image: '/refrigerante-pepsi.png', description: 'Refrigerante Pepsi', promo: true },

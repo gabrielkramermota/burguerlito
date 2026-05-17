@@ -7,7 +7,7 @@ export function getBusinessStatus(date) {
   const isThurSatSun = day === 4 || day === 6 || day === 0
 
   const openFridayLunch = isFriday && inRange(minutes, 12 * 60, 17 * 60)
-  const openEvening = (isFriday || isThurSatSun) && inRange(minutes, 18 * 60 + 30, 24 * 60)
+  const openEvening = isThurSatSun && inRange(minutes, 18 * 60 + 30, 23 * 60)
 
   return { open: openFridayLunch || openEvening }
 }

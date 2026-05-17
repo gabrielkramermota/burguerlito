@@ -1,14 +1,4 @@
-import { useState, useEffect } from 'react'
-import { getBusinessStatus } from '../utils/business'
-
-export default function BusinessStatus() {
-  const [status, setStatus] = useState(() => getBusinessStatus(new Date()))
-
-  useEffect(() => {
-    const interval = setInterval(() => setStatus(getBusinessStatus(new Date())), 60000)
-    return () => clearInterval(interval)
-  }, [])
-
+export default function BusinessStatus({ status }) {
   return (
     <>
     <div className="info-strip rounded-lg p-4 mb-4">
@@ -18,11 +8,11 @@ export default function BusinessStatus() {
           <div className="hours-list grid gap-2 text-sm">
             <div className="hours-row">
               <span>Quinta, sábado e domingo</span>
-              <strong>18h30 às 00h</strong>
+              <strong>18h30 às 23h</strong>
             </div>
             <div className="hours-row">
               <span>Sexta</span>
-              <strong>12h às 17h e 18h30 às 00h</strong>
+              <strong>12h às 17h</strong>
             </div>
           </div>
         </div>
